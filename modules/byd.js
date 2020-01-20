@@ -8,8 +8,9 @@ module.exports = {
 }
 
 //Load Configurations
-var bydTenant =   process.env.BYD_TENANT+":"
-var csrfToken = null;
+var BYD_TENANT =   process.env.BYD_TENANT
+var CSRF_TOKEN = null;
+var COOKIES = null
 
 //Load Node Modules
 var req = require('request') // HTTP Client
@@ -17,10 +18,9 @@ var req = require('request') // HTTP Client
 
 //Retrieve Items
 function GetMaterials(callback) {
-
     var options = {
         method: "GET",
-        url: bydTenant + "/sap/byd/odata/cust/v1/vmumaterial/MaterialCollection?$format=json",
+        url: BYD_TENANT + "/sap/byd/odata/cust/v1/vmumaterial/MaterialCollection?$format=json",
         headers: setByDHeaders()
     }
 
@@ -31,6 +31,7 @@ function GetMaterials(callback) {
     req.get(options, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             body = JSON.parse(body);
+            setCookies(response.headers)
             return callback(null, body);
         } else {
             return callback('ERROR '+ response.statusCode + " - " + error);
@@ -39,16 +40,23 @@ function GetMaterials(callback) {
 }
 
 function setByDHeaders(method){
-
-    csrf = csrfToken
+    var csrf = CSRF_TOKEN
+    var cookies = COOKIES
     if (method == "GET" || method == "HEAD") {
         // Get Method doesnt require token
         csrf = 'fetch'
+        cookies = null
     }
     return(header =  {
         "x-csrf-token": csrf,
         "Accept":"application/json",
-        "Authorization": "Basic " + new Buffer(process.env.BYD_USER + ":" + process.env.BYD_PASSWORD).toString("base64") 
+        "Authorization": "Basic " + new Buffer(process.env.BYD_USER + ":" + process.env.BYD_PASSWORD).toString("base64"),
+        "Cookie": cookies,
     })
+}
 
+
+function setCookies(headers){
+    COOKIES = headers['set-cookie']
+    CSRF_TOKEN = headers["x-csrf-token"]
 }
