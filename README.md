@@ -1,4 +1,4 @@
-# scp-b1
+# scp-byd
 [![SAP](https://i.imgur.com/kkQTp3m.png)](https://cloudplatform.sap.com)
 
 This is a sample step by step guide of how to build cloud applications based on [Cloud Foundry](https://www.cloudfoundry.org/). 
@@ -19,26 +19,26 @@ $ cf push --random-route
 ```
 Then set the Environment Variables accordingly
 ```sh
-$ cf set-env scp-b1 B1_SERVER_ENV http://<your b1 server>
-$ cf set-env scp-b1 B1_SLPORT_ENV <Service Layer Port>
-$ cf set-env scp-b1 B1_SLPATH_ENV <Service Layer path>
-$ cf set-env scp-b1 B1_USER_ENV <B1 User Name>
-$ cf set-env scp-b1 B1_PASS_ENV <B1 User Password>
-$ cf set-env scp-b1 B1_COMP_ENV <B1 Company DB>
+$ cf set-env scp-byd B1_SERVER_ENV http://<your b1 server>
+$ cf set-env scp-byd B1_SLPORT_ENV <Service Layer Port>
+$ cf set-env scp-byd B1_SLPATH_ENV <Service Layer path>
+$ cf set-env scp-byd B1_USER_ENV <B1 User Name>
+$ cf set-env scp-byd B1_PASS_ENV <B1 User Password>
+$ cf set-env scp-byd B1_COMP_ENV <B1 Company DB>
 ```
 **Example**
 ```sh
-$ cf set-env scp-b1 B1_SERVER_ENV http://hanab1
-$ cf set-env scp-b1 B1_SLPORT_ENV 50001
-$ cf set-env scp-b1 B1_SLPATH_ENV /b1s/v1/      
-$ cf set-env scp-b1 B1_USER_ENV manager
-$ cf set-env scp-b1 B1_PASS_ENV 1234
-$ cf set-env scp-b1 B1_COMP_ENV SBODEMOUS
+$ cf set-env scp-byd B1_SERVER_ENV http://hanab1
+$ cf set-env scp-byd B1_SLPORT_ENV 50001
+$ cf set-env scp-byd B1_SLPATH_ENV /b1s/v1/      
+$ cf set-env scp-byd B1_USER_ENV manager
+$ cf set-env scp-byd B1_PASS_ENV 1234
+$ cf set-env scp-byd B1_COMP_ENV SBODEMOUS
 ```
 
 Restart your application (so it can read the new environment variables)
 ```sh
-$ cf restart scp-b1
+$ cf restart scp-byd
 ```
 
 Access the app from the URL route showed in the terminal
@@ -47,4 +47,4 @@ Access the app from the URL route showed in the terminal
 There is also available a [.Net version](https://github.com/B1SA/cfNetDemo) of this app.
 
 ## License
-scp-b1 is released under the terms of the MIT license. See [LICENSE](LICENSE) for more information or see https://opensource.org/licenses/MIT.
+scp-byd is released under the terms of the MIT license. See [LICENSE](LICENSE) for more information or see https://opensource.org/licenses/MIT.

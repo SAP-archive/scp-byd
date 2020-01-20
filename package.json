@@ -1,5 +1,5 @@
 {
-  "name": "scp-b1",
+  "name": "scp-byd",
   "version": "1.0.0",
   "description": "A NodeJS sample app to demonstrate cloud foundry and B1 Service Layer",
   "main": "app.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ralphive/scp-b1.git"
+    "url": "git+https://github.com/B1SA/scp-byd.git"
   },
   "keywords": [
     "service",
@@ -28,9 +28,9 @@
   "author": "@Ralphive",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ralphive/scp-b1/issues"
+    "url": "https://github.com/B1SA/scp-byd/issues"
   },
-  "homepage": "https://github.com/Ralphive/scp-b1#readme",
+  "homepage": "https://github.com/B1SA/scp-byd#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
