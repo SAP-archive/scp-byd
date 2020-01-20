@@ -10,7 +10,7 @@ $(document).ready(function () {
 });
 
 function displayItems(json) {
-	var items = json.value;
+	var items = json.d.results;
 	$("#resultTable tbody").empty();
 	//Lines	
 	for (var i = 0; i < items.length; i++) {

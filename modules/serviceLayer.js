@@ -33,7 +33,7 @@ function GetMaterials(callback) {
             body = JSON.parse(body);
             return callback(null, body);
         } else {
-            return callback(error);
+            return callback('ERROR '+ response.statusCode + " - " + error);
         }
     });
 }
