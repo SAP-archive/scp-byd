@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 /* Load Local Modules */
-var sl = require('./modules/serviceLayer');
+var byd = require('./modules/byd');
 
 var output = {};
 
@@ -19,7 +19,7 @@ var output = {};
 
 //EndPoint To retrieve Items from Service Layer
 app.get('/GetMaterial', function (req, res) { 
-  sl.GetMaterials(function (error, resp) {
+  byd.GetMaterials(function (error, resp) {
     if (error) {
       console.error("Can't get Items from Service Layer - " + error);
       res.send(error);
