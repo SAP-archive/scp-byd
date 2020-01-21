@@ -13,29 +13,28 @@ The idea of this application is based in the [beer-list](https://github.com/mari
 * A free trial account on  [SAP Cloud Platform](https://developers.sap.com/tutorials/cp-trial-quick-onboarding.html) with **Cloud Foundry Trial** initialized
 * Install and configure the [Cloud Foundry Command Line Interface (CLI)](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/75125ef1e60e490e91eb58fe48c0f9e7.html#loio4ef907afb1254e8286882a2bdef0edf4) on your machine   
 * A SAP Business ByDesign Tenant 
+* Deploy this [Materials OData Definition](https://github.com/SAP-samples/sapbydesign-api-samples/blob/master/Custom%20OData%20Services/vmumaterial.xml) on your tenant. [See here on example](https://www.youtube.com/watch?v=z6mF_1hFths)
 
 ### Installation
+Clone this repository
+```sh
+$ git clone https://github.com/B1SA/scp-byd.git
+```
 From the root directory, using the [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) push your app to the SAP CP Cloud Foundry
 ```sh
 $ cf push --random-route
 ```
 Then set the Environment Variables accordingly
 ```sh
-$ cf set-env scp-byd B1_SERVER_ENV http://<your b1 server>
-$ cf set-env scp-byd B1_SLPORT_ENV <Service Layer Port>
-$ cf set-env scp-byd B1_SLPATH_ENV <Service Layer path>
-$ cf set-env scp-byd B1_USER_ENV <B1 User Name>
-$ cf set-env scp-byd B1_PASS_ENV <B1 User Password>
-$ cf set-env scp-byd B1_COMP_ENV <B1 Company DB>
+$ cf set-env scp-byd BYD_TENANT http://<your ByD Tenant server>
+$ cf set-env scp-byd BYD_USER <ByD User>
+$ cf set-env scp-byd BYD_PASSWORD <ByD Password>
 ```
 **Example**
 ```sh
-$ cf set-env scp-byd B1_SERVER_ENV http://hanab1
-$ cf set-env scp-byd B1_SLPORT_ENV 50001
-$ cf set-env scp-byd B1_SLPATH_ENV /b1s/v1/      
-$ cf set-env scp-byd B1_USER_ENV manager
-$ cf set-env scp-byd B1_PASS_ENV 1234
-$ cf set-env scp-byd B1_COMP_ENV SBODEMOUS
+$ cf set-env scp-byd BYD_TENANT https://my60666.sapbydesign.com
+$ cf set-env scp-byd BYD_USER <ByD User>
+$ cf set-env scp-byd BYD_PASSWORD <ByD Password>
 ```
 
 Restart your application (so it can read the new environment variables)
@@ -44,9 +43,6 @@ $ cf restart scp-byd
 ```
 
 Access the app from the URL route showed in the terminal
-
-## Alternative Implementation
-There is also available a [.Net version](https://github.com/B1SA/cfNetDemo) of this app.
 
 ## License
 scp-byd is released under the terms of the MIT license. See [LICENSE](LICENSE) for more information or see https://opensource.org/licenses/MIT.
