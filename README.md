@@ -12,7 +12,7 @@ The idea of this application is based in the [beer-list](https://github.com/mari
 
 ## Pre Requisites
 * A free trial account on  [SAP Cloud Platform](https://developers.sap.com/tutorials/cp-trial-quick-onboarding.html) with **Cloud Foundry Trial** initialized
-* Install and configure the [Cloud Foundry Command Line Interface (CLI)](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/75125ef1e60e490e91eb58fe48c0f9e7.html#loio4ef907afb1254e8286882a2bdef0edf4) on your machine   
+* Install and configure the [Cloud Foundry Command Line Interface (CLI)](https://developers.sap.com/tutorials/cp-cf-download-cli.html) on your machine
 * A SAP Business ByDesign Tenant 
 * Deploy this [Materials OData Definition](https://github.com/SAP-samples/sapbydesign-api-samples/blob/master/Custom%20OData%20Services/vmumaterial.xml) on your tenant. [See here on example](https://www.youtube.com/watch?v=z6mF_1hFths)
 
