@@ -4,6 +4,10 @@
 module.exports = {
     GetMaterials: function (response) {
         return (GetMaterials(response));
+    },
+
+    GetCSRFToken: function () {
+        return CSRF_TOKEN;
     }
 }
 
@@ -21,8 +25,9 @@ function GetMaterials(callback) {
     var options = {
         method: "GET",
         url: BYD_TENANT + "/sap/byd/odata/cust/v1/vmumaterial/MaterialCollection?$format=json",
-        headers: setByDHeaders()
     }
+    options.headers = setByDHeaders(options.method)
+
 
     //Set HTTP Request Options
     console.log("Preparing BYD Request - " + options.method + " - " + options.url)

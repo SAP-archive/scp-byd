@@ -26,6 +26,6 @@ function displayItems(json) {
 
 function displayEnvironment(json) {
 	$("#env").append(
-		"<div>" + "<strong>ByD CSRF Token:</strong> " + json.sl + "</div>" +
+		"<div>" + "<strong>ByD CSRF Token:</strong> " + json.bydToken + "</div>" +
 		"<div>" + "<strong>Served by server #</strong> " + json.instance + "</div>");
 }
