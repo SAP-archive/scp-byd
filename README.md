@@ -1,5 +1,6 @@
 # scp-byd
 [![SAP](https://i.imgur.com/kkQTp3m.png)](https://cloudplatform.sap.com)
+[![SAP](https://i.imgur.com/zNslwny.png)](https://cloudplatform.sap.com)
 
 This is a sample step by step guide of how to build cloud applications based on [Cloud Foundry](https://www.cloudfoundry.org/). 
 It is coded in [NodeJ](https://nodejs.org/en/) 
