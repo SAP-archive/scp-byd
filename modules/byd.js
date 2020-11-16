@@ -24,7 +24,7 @@ var req = require('request') // HTTP Client
 function GetMaterials(callback) {
     var options = {
         method: "GET",
-        url: BYD_TENANT + "/sap/byd/odata/cust/v1/vmumaterial/MaterialCollection?$format=json",
+        url: BYD_TENANT + "/sap/byd/odata/cust/v1/vmumaterial/MaterialCollection?$format=json&$top=30",
     }
     options.headers = setByDHeaders(options.method)
 
