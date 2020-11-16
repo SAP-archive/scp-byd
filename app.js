@@ -21,7 +21,7 @@ var output = {};
 app.get('/GetMaterial', function (req, res) { 
   byd.GetMaterials(function (error, resp) {
     if (error) {
-      console.error("Can't get Items from Service Layer - " + error);
+      console.error("Can't get Items from ByDesign  " + error);
       res.send(error);
     } else {
       res.setHeader('Content-Type', 'application/json');
@@ -35,7 +35,6 @@ app.get('/GetEnv', function (req, res) {
   output.instance = 0;
   output.instance = (process.env.CF_INSTANCE_INDEX * 1) + 1
   output.env = process.env.HOME;
-  output.bydToken = byd.GetCSRFToken()
   res.send(output);
 });
 
