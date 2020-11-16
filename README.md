@@ -36,8 +36,8 @@ cf set-env scp-byd BYD_PASSWORD <ByD Password>
 **Example**
 ```sh
 cf set-env scp-byd BYD_TENANT https://my60666.sapbydesign.com
-cf set-env scp-byd BYD_USER <ByD User>
-cf set-env scp-byd BYD_PASSWORD <ByD Password>
+cf set-env scp-byd BYD_USER INTEGRATIONUSER
+cf set-env scp-byd BYD_PASSWORD a1b2c3
 ```
 
 Restart your application (so it can read the new environment variables)
