@@ -1,0 +1,9 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: byd-scp
+Upstream-Contact: Ralphive <>
+Source: https://github.com/SAP-Samples/byd-scp
+# Sample paragraph, commented out:
+#
+Files: * 
+Copyright: 2020 SAP SE or an SAP affiliate company and byd-scp contributors
+License: Apache-2.0
