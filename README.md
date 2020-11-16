@@ -1,3 +1,5 @@
+[![License: Apache2](https://img.shields.io/badge/License-Apache2-green.svg)](https://opensource.org/licenses/Apache-2.0)
+
 # scp-byd
 [![SAP](https://i.imgur.com/kkQTp3m.png)](https://cloudplatform.sap.com)
 [![SAP](https://i.imgur.com/zNslwny.png)](https://cloudplatform.sap.com)
