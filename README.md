@@ -1,18 +1,15 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/scp-byd)](https://api.reuse.software/info/github.com/SAP-samples/scp-byd)
 [![License: Apache2](https://img.shields.io/badge/License-Apache2-green.svg)](https://opensource.org/licenses/Apache-2.0)
-
+![CI](https://github.com/SAP-Samples/scp-byd/workflows/CI/badge.svg)
 # scp-byd
 [![SAP](https://i.imgur.com/kkQTp3m.png)](https://cloudplatform.sap.com)
 [![SAP](https://i.imgur.com/zNslwny.png)](https://cloudplatform.sap.com)
 
-This is a sample applications based on [Cloud Foundry](https://www.cloudfoundry.org/). 
-It is coded in [NodeJ](https://nodejs.org/en/) 
-
-It is integrated with [SAP Business ByDesign](https://www.sap.com/uk/products/business-bydesign.html) using the [OData Services](https://odata.org) to list Items. 
+This is a sample applications based on [Cloud Foundry](https://www.cloudfoundry.org/). It is coded in [NodeJ](https://nodejs.org/en/) and integrated with [SAP Business ByDesign](https://www.sap.com/uk/products/business-bydesign.html) using the [OData Services](https://odata.org) to list Items. 
 
 The idea of this application is based in the [beer-list](https://github.com/mariantalla/beer-list) app.
 
 [Live Version](https://scp-byd.cfapps.eu10.hana.ondemand.com/)
-
 
 ## Requirements
 *  [Install the Cloud Foundry CLI](https://developers.sap.com/tutorials/cp-cf-download-cli.html)
