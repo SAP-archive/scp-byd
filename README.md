@@ -11,41 +11,48 @@ It is integrated with [SAP Business ByDesign](https://www.sap.com/uk/products/bu
 
 The idea of this application is based in the [beer-list](https://github.com/mariantalla/beer-list) app.
 
+[Live Demo](https://scp-byd.cfapps.eu10.hana.ondemand.com/)
 
-## Pre Requisites
-* A free trial account on  [SAP Cloud Platform](https://developers.sap.com/tutorials/cp-trial-quick-onboarding.html) with **Cloud Foundry Trial** initialized
-* Install and configure the [Cloud Foundry Command Line Interface (CLI)](https://developers.sap.com/tutorials/cp-cf-download-cli.html) on your machine
+
+## Requirements
+*  [Install the Cloud Foundry CLI](https://developers.sap.com/tutorials/cp-cf-download-cli.html)
+*  [Learn the Fundamentals of SCP Cloud Foundry](https://developers.sap.com/tutorials/cp-cf-fundamentals.html)
 * A SAP Business ByDesign Tenant 
-* Deploy this [Materials OData Definition](https://github.com/SAP-samples/sapbydesign-api-samples/blob/master/Custom%20OData%20Services/vmumaterial.xml) on your tenant. [See here on example](https://www.youtube.com/watch?v=z6mF_1hFths)
+* Deploy this [Materials OData Definition](https://github.com/SAP-samples/sapbydesign-api-samples/blob/master/Custom%20OData%20Services/vmumaterial.xml) on your tenant. [See here how](https://www.youtube.com/watch?v=z6mF_1hFths)
 
-### Installation
+### Deployment
 Clone this repository
 ```sh
-$ git clone https://github.com/B1SA/scp-byd.git
+git clone https://github.com/SAP-Samples/scp-byd.git
 ```
 From the root directory, using the [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) push your app to the SAP CP Cloud Foundry
 ```sh
-$ cf push --random-route
+cf push --random-route
 ```
 Then set the Environment Variables accordingly
 ```sh
-$ cf set-env scp-byd BYD_TENANT http://<your ByD Tenant server>
-$ cf set-env scp-byd BYD_USER <ByD User>
-$ cf set-env scp-byd BYD_PASSWORD <ByD Password>
+cf set-env scp-byd BYD_TENANT http://<your ByD Tenant server>
+cf set-env scp-byd BYD_USER <ByD User>
+cf set-env scp-byd BYD_PASSWORD <ByD Password>
 ```
 **Example**
 ```sh
-$ cf set-env scp-byd BYD_TENANT https://my60666.sapbydesign.com
-$ cf set-env scp-byd BYD_USER <ByD User>
-$ cf set-env scp-byd BYD_PASSWORD <ByD Password>
+cf set-env scp-byd BYD_TENANT https://my60666.sapbydesign.com
+cf set-env scp-byd BYD_USER <ByD User>
+cf set-env scp-byd BYD_PASSWORD <ByD Password>
 ```
 
 Restart your application (so it can read the new environment variables)
 ```sh
-$ cf restart scp-byd
+cf restart scp-byd
 ```
 
-Access the app from the URL route showed in the terminal
+Access the app from the URL route shown in the terminal
+
+## Support and Contributions  
+This repository is provided "as-is". With no Warranty or support
+
+If you have questions, please ask.
 
 ## License
-scp-byd is released under the terms of the MIT license. See [LICENSE](LICENSE) for more information or see https://opensource.org/licenses/MIT.
+Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
